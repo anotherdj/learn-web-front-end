@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>IE兼容性问题Shiv解决方案</title>
+	<!--[]if It IE 9>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min,js"></script>
+    <![endif]-->
+</head>
+<h1>IE兼容性问题Shiv解决方案</h1>
+<article>
+	<p>web前端开发，了解IE兼容性shiv解决方案</p>
+	<p>Internet Explorer 浏览器问题
+你可以使用以上的方法来为 IE 浏览器添加 HTML5 元素，但是：
+
+Internet Explorer 8 及更早 IE 版本的浏览器不支持以上的方式。
+我们可以使用 Sjoerd Visscher 创建的 "HTML5 Enabling JavaScript", " shiv" 来解决该问题:
+	
+<!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+以上代码是一个注释，作用是在 IE 浏览器的版本小于 IE9 时将读取 html5.js 文件，并解析它。
+注意：国内用户请使用百度静态资源库（Google 资源库在国内不稳定）：
+<!--[if lt IE 9]>
+  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+针对IE浏览器html5shiv 是比较好的解决方案。html5shiv主要解决HTML5提出的新的元素不被IE6-8识别，这些新元素不能作为父节点包裹子元素，并且不能应用CSS样式。</p>
+</article>
+<body>
+</body>
+</html>
