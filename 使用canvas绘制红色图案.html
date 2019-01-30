@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>使用canvas绘制红色图案</title>
+</head>
+
+<body>
+	<canvas id="mycanvas1" width="200" height="100" style="border: 1px solid #c3c3c3;">
+	你的浏览器不支持HTML5 canvas标签
+	</canvas>
+	
+	<script>
+	    var c=document.getElementById("mycanvas1");
+		var ctx=c.getContext("2d");
+		ctx.fillStyle="#FF0000";
+		ctx.fillRect(0,0,150,75);
+	</script>
+	
+		<canvas id="mycanvas2" width="200" height="100" style="border: 1px solid #d3d3d3;">
+	     你的浏览器不支持HTML5 canvas标签
+	    </canvas>
+	
+	<script>
+	    var c=document.getElementById("mycanvas2");
+		var ctx=c.getContext("2d");
+		ctx.moveTo(0,0);
+		ctx.lineTo(200,100);
+		ctx.stroke();
+	</script>
+	
+     <canvas id="mycanvas3" width="200" height="100" style="border: 1px   solid #d3d3d3;">
+	     你的浏览器不支持HTML5 canvas标签
+	 </canvas>
+	
+	<script>
+	    var c=document.getElementById("mycanvas3");
+		var ctx=c.getContext("2d");
+        ctx.beginPath();
+		ctx.arc(100,50,50,0,2*Math.PI);
+		ctx.stroke();
+	</script>
+	
+	  <canvas id="mycanvas4" width="200" height="100" style="border: 1px   solid #d3d3d3;">
+	     你的浏览器不支持HTML5 canvas标签
+	 </canvas>
+	
+	<script>
+	    var c=document.getElementById("mycanvas4");
+		var ctx=c.getContext("2d");
+        ctx.font="30px Arial";
+		ctx.strokeText("Hello World",10,50);
+	</script>
+	
+	 <canvas id="mycanvas5" width="200" height="100" style="border: 1px   solid #d3d3d3;">
+	     你的浏览器不支持HTML5 canvas标签
+	 </canvas>
+	
+	<script>
+	    var c=document.getElementById("mycanvas5");
+		var ctx=c.getContext("2d");
+        ctx.font="30px Arial";
+		ctx.fillText("Hello World",10,50);
+		
+	</script>
+	
+	 <canvas id="mycanvas6" width="200" height="100" style="border: 1px   solid #d3d3d3;">
+	     你的浏览器不支持HTML5 canvas标签
+	 </canvas>
+	
+	<script>
+	    var c=document.getElementById("mycanvas6");
+		var ctx=c.getContext("2d");
+        //Create gradient
+		var grd=ctx.createLinearGradient(0,0,200,0);
+		grd.addColorStop(0,"red");
+		grd.addColorStop(1,"white");
+		//Fill with gradient
+		ctx.fillStyle=grd;
+		ctx.fillRect(10,10,150,80);
+		
+	</script>
+	
+	 <canvas id="mycanvas7" width="200" height="100" style="border: 1px   solid #d3d3d3;">
+	     你的浏览器不支持HTML5 canvas标签
+	 </canvas>
+	
+	<script>
+	    var c=document.getElementById("mycanvas7");
+		var ctx=c.getContext("2d");
+        //Create gradient
+		var grd=ctx.createRadialGradient(100,50,0,100,50,60);
+		grd.addColorStop(0,"red");
+		grd.addColorStop(1,"white");
+		//Fill with gradient
+		ctx.fillStyle=grd;
+		ctx.fillRect(0,0,200,100);		
+	</script>
+		
+</body>
+</html>
