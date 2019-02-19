@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>改变HTML内容</title>
+</head>
+
+<body>
+<h1>我的第一段 JavaScript</h1>
+<p id="demo">JavaScript 能改变 HTML 元素的内容。</p>
+<script>
+function myFunction(){
+	x=document.getElementById("demo");//找到元素
+	x.innerHTML="Hello JavaScript!";  //改变内容
+}
+</script>
+<button type="button" onClick="myFunction()">点击这里</button>
+<p>您会经常看到 document.getElementById("some id")。这个方法是 HTML DOM 中定义的。
+
+DOM (Document Object Model)（文档对象模型）是用于访问 HTML 元素的正式 W3C 标准。</p>
+</body>
+</html>
