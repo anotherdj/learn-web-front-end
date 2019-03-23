@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>title</title>
+	</head>
+	<body>
+		<ul>
+			<li id="cloth">衣服</li>
+			<li>裤子</li>
+			<li>内内</li>
+			<li>袜子</li>
+		</ul>
+		<script src="jquery/jquery-3.3.1.js"></script>
+		<script>  
+		$(function(){
+			//DOM对象(js对象),使用js的方式获取到的元素就是js对象
+// 			var cloth = document.getElementById("cloth");
+// 			cloth.style.backgroundColor = "pink";
+// 			
+			//使用jq获取的元素就是jq对象
+// 			var $li = $("li");
+// 			$li.text("修改了内容");
+			//jq对象与js对象的区别
+			//jq对象与js对象的联系(jq对象是js对象的的一个集合，伪数组，里面存放了一堆的js对象)
+			
+			//jq对象能不能调用DOM对象的方法
+			//var $li = $("li");
+			//$li[0].setAttribute("name","hehe");
+			//$li 是伪数组,jq对象不能直接调用DOM对象的方法,但是可以取出对象里面的元素再调用DOM对象的方法.
+			//可以像数组一样用下标取出来,也可以用.get()方法取出来
+			//var $li = $("li");
+			//$li[0].style.backgroundColor= "red";
+			//DOM无法调用jq对象方法:为什么,因为是两个不同的对象
+			//DOM对象需要用jq对象的方法,则需要把DOM对象转换成jq对象
+			var cloth = document.getElementById("cloth");
+			//DOM对象转换成jq对象,使用$将其转换
+			$(cloth).text("变换");
+			
+			//jq对象与js对象的区别和联系
+			//区别:js对象和jq对象的方法不能混用
+			//联系:  DOM -->  jQuery   $()
+			//       jQuery ---> DOM  $li[0]    $li.get(0)
+		});
+		</script>
+	</body>
+</html>

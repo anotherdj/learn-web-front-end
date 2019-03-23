@@ -1,0 +1,50 @@
+/*
+function saveStorage(id){
+	var data=document.getElementById(id).value;
+	var time=new Date().getTime();
+	localStorage.setItem(time,data);
+	alert("数据已保存！");
+	loadStorage('msg');
+}
+function loadStorage(id){
+	var result='<table border="1">';
+	for(var i=0;i<localStorage.length;i++)
+	{
+		var key=localStorage.key(i);
+		var value=localStorage.getItem(key);
+		var date=new Date();
+		date.setTime(key);
+		var datestr=date.toGMTString();
+		result += '<tr><td>'+'这是第'+i+'条数据</td><td>'+ localStorage.getItem( localStorage.key(i))+'</td><td>'+datestr+'</td></tr>';
+	}
+	result +='</table>';
+	var target=document.getElementById(id);
+	target.innerHTML=result;
+}
+*/
+function saveStorage(id){
+    var data = document.getElementById(id).value;
+    var time = new Date().getTime();
+    localStorage.setItem(time,data);
+    alert("数据已经被保存！");
+    loadStorage('msg');
+}
+function loadStorage(id){
+    var result = '<table border="1">';
+    for(var i=0;i<localStorage.length;i++)
+    {
+        var value = localStorage.getItem( localStorage.key(i));
+        var date = new Date();
+        date.setTime( localStorage.key(i));
+        var datestr = date.toGMTString();
+        result += '<tr><td>'+'这是第'+i+'条数据</td><td>'+ localStorage.getItem( localStorage.key(i))+'</td><td>'+datestr+'</td></tr>';
+    }
+    result += '</table>';
+    var target = document.getElementById(id);
+    target.innerHTML = result;
+}
+function clearStorage(id){
+    localStorage.clear();
+    alert("数据已经被成功删除！");
+    loadStorage('msg');
+}

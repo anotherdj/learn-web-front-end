@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>title</title>
+		<script src="jquery/jquery-1.12.4.js"></script>
+	</head>
+	<body>
+		<ul>
+			<li>第1个li</li>
+			<li>第2个li</li>
+			<li>第3个li</li>
+			<li>第4个li</li>
+			<li>第5个li</li>
+			<li>第6个li</li>
+			<li>第7个li</li>
+			<li>第8个li</li>
+			<li>第9个li</li>
+			<li>第10个li</li>
+		</ul>
+		
+		<script>
+			$(function(){
+				//var lis=document.getElementByTagName("li");
+				//就这么写，会不会报错，会不会有效果
+				var lis=$("li");
+				for(var i=0;i<lis.length;i++){
+					if(i % 2==0){
+						 // lis:jq对象
+        // lis[i]:DOM对象，通过下标取出来了
+						lis[i].style.backgroundColor="pink";
+					}else{
+						lis[i].style.backgroundColor="hotpink";
+					}
+				}
+ 			});
+		</script>
+	</body>
+</html>

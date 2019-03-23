@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>title</title>
+		<script src="jquery/jquery-1.12.4.js"></script>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li id="four">4</li>
+			<li>5</li>
+			<li class="green yellow">6</li>
+			<li class="green">7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			
+			<div class="green">111</div>
+			<div class="green">111</div>
+			<div class="green">111</div>
+			<div class="green">111</div>
+			<div class="green">111</div>
+		</ul>
+		
+		
+		<script>
+			//入口函数
+			$(function(){
+				//jQuery如何设置样式
+				//css(name,value)
+				//name是样式名称,value是样式的值
+				//id选择器 $("#id")
+				//$("#four").css("backgroundColor","red");
+				//class选择器 $(".class")
+				//$(".green").css("backgroundColor","green");
+				//标签,元素选择器 $("tag")
+				//$("li").css("color",""red);
+				//交集/并集
+				//$("#four,green").css("backgroundColor","pink");
+				//$("li.green").css("backgroundColor","red");
+				$(".green.yellow").css("backgroundColor","pink");
+			});
+		</script>
+	</body>
+</html>
